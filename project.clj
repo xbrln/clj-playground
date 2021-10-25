@@ -10,7 +10,9 @@
  :plugins [[lein-environ "1.2.0"]]
 
  :profiles
- {:uberjar {:aot :all}
+ {:uberjar
+  {:aot :all
+   :uberjar-name "app-standalone.jar"}
 
   :dev [:project/dev :profiles/dev]
   :test [:project/test :profiles/test]
