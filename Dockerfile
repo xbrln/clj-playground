@@ -16,6 +16,6 @@ ENV name=Nasir
 
 EXPOSE 3000
 
-ENTRYPOINT top -b
+#ENTRYPOINT top -b
 
 CMD java -jar target/app-standalone.jar
