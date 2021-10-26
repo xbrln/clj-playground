@@ -8,6 +8,7 @@
               :dbname "playground"
               :user "playground"
               :password (env :db-password)
+              :port 5433
               :serverTimezone "CET"})
 
 (def ds (jdbc/get-datasource db-spec))
@@ -17,7 +18,7 @@
 (get (first rs) :spielpark1/name)
 
 (defn -main []
-  (println (str "hello " (env :name))))
+  (println (str "hello " (or (env :name2) "stranger"))))
 
 (comment
   (env :abc))
