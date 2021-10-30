@@ -13,18 +13,18 @@
                         :db (:db-spec config)})
 
 ;initialize the database using the 'init.sql' script
-(migratus/init migrations-config)
+; (migratus/init migrations-config)
 
 ;apply pending migrations
 (migratus/migrate migrations-config)
 
 ;rollback the migration with the latest timestamp
-(migratus/rollback migrations-config)
+; (migratus/rollback migrations-config)
 
 ;bring up migrations matching the ids
-(migratus/up migrations-config 20111206154000)
+; (migratus/up migrations-config 20111206154000)
 
 ;bring down migrations matching the ids
-(migratus/down migrations-config 20111206154000)
+; (migratus/down migrations-config 20111206154000)
 
-(migratus/create migrations-config "create-user")
+; (migratus/create migrations-config "create-user")
