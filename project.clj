@@ -14,15 +14,15 @@
  :plugins [[lein-environ "1.2.0"]
            [migratus-lein "0.7.3"]]
 
- :migratus {:store :database
-            :migration-dir "migrations"
-            :db {:dbtype "postgres"
-                 :dbname "playground"
-                 :user "playground"
-                 ; :password (environ.core/env :db-password)
-                 :password (get (System/getenv) "DB_PASSWORD")
-                 :port 5433
-                 :serverTimezone "CET"}}
+ ; :migratus {:store :database
+ ;            :migration-dir "migrations"
+ ;            :db {:dbtype "postgres"
+ ;                 :dbname "playground"
+ ;                 :user "playground"
+ ;                 ; :password (environ.core/env :db-password)
+ ;                 :password (get (System/getenv) "DB_PASSWORD")
+ ;                 :port 5433
+ ;                 :serverTimezone "CET"}}
 
  :profiles
  {:uberjar
