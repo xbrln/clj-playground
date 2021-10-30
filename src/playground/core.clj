@@ -1,24 +1,17 @@
 (ns playground.core
   (:require
-   [environ.core :refer [env]]
+   [playground.config :refer [config]]
    [next.jdbc :as jdbc])
   (:gen-class))
 
-(def db-spec {:dbtype "postgres"
-              :dbname "playground"
-              :user "playground"
-              :password (env :db-password)
-              :port 5433
-              :serverTimezone "CET"})
-
-(def ds (jdbc/get-datasource db-spec))
+(def ds (jdbc/get-datasource (:db-spec config)))
 
 (def rs (jdbc/execute! ds ["select * from spielpark1"]))
 
 (get (first rs) :spielpark1/name)
 
 (defn -main []
-  (println (str "hello " (or (env :name2) "stranger"))))
+  (println (str "hello " (or (:name config) "stranger"))))
 
-(comment
-  (env :abc))
+(comment)
+(:message config)

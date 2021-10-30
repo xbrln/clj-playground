@@ -1,0 +1,19 @@
+{:secrets #include #join [#env PWD "/secrets.edn"]
+ :db-spec {:dbtype "postgres"
+           :dbname "playground"
+           :user "playground"
+           :password #or [#env DB_PASSWORD #ref [:secrets :db-password]]
+           :port 5433
+           :serverTimezone "CET"}
+ :name #or [#env NAME #ref [:secrets :name]]
+ :message #or [#env MESSAGE #or [#ref [:secrets :message] "Hello from config.edn!!!"]]}
+
+ ;  use profiles
+ ; :environment-value #profile {:dev "dev-env"
+                              ; :test "test-env"]}
+
+ ; get value from sytem env and used default if not available.
+ ; :secret-message #or [#env SECRET_MESSAGE "default"]
+
+ ; get value from secrets edn and use default if not available
+ ; :secret-message #or [#ref [:secrets :message] "default"]}
