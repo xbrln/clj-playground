@@ -1,6 +1,6 @@
 (defproject
  playground "0.1.0"
- :description "Example project"
+ :description "An example project to try out all the different libraries"
  :url "http://example.com/FIXME"
  :dependencies [[aero "1.1.6"]
                 [com.brunobonacci/mulog "0.8.1"]
