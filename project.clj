@@ -3,6 +3,7 @@
  :description "An example project to try out all the different libraries"
  :url "http://example.com/FIXME"
  :dependencies [[aero "1.1.6"]
+                [clojure-csv "2.0.2"]
                 [com.brunobonacci/mulog "0.8.1"]
                 [com.github.seancorfield/next.jdbc "1.2.731"]
                 [migratus "1.3.5"]
