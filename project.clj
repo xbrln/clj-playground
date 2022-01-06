@@ -1,13 +1,13 @@
 (defproject
  playground "0.1.0"
- :description "An example project to try out all the different libraries"
- :url "http://example.com/FIXME"
+ :description "An example project to try out different libraries"
+ :url "https://github.com/xbrln/clj-playground"
  :dependencies [[aero "1.1.6"]
-                [clojure-csv "2.0.2"]
                 [com.brunobonacci/mulog "0.8.1"]
                 [com.github.seancorfield/next.jdbc "1.2.731"]
                 [migratus "1.3.5"]
                 [org.clojure/clojure "1.10.3"]
+                [org.clojure/data.csv "1.0.0"]
                 [org.postgresql/postgresql "42.3.0"]]
 
  :min-lein-version "2.0.0"
